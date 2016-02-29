@@ -1,11 +1,7 @@
 require 'spec_helper'
 
 describe Pictureframe do
-  it 'has a version number' do
-    expect(Pictureframe::VERSION).not_to be nil
-  end
-
-  it 'does something useful' do
-    expect(false).to eq(true)
+  it "#frameWrap" do
+    expect(Pictureframe.frameWrap("hello", 20)).to eq("| | hello        | |")
   end
 end
