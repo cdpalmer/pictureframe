@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Cody Palmer"]
   spec.email         = ["teampalmer.apps@gmail.com"]
 
-  spec.summary       = %q{The gem that makes debug statements easy to spot and formatted well.}
-  spec.description   = %q{The gem that makes debug statements easy to spot and framed in an easy-to-spot picture frame!}
+  spec.summary       = %q{The gem to frame your debug code.}
+  spec.description   = %q{A gem to put an ascii picture frame around your debug output.}
   spec.homepage      = "http://www.github.com/cdpalmer"
   spec.license       = "MIT"
 

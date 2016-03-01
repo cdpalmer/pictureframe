@@ -11,16 +11,18 @@ describe Pictureframe do
     expect(Pictureframe.frame("test", 13)).to eq(desiredOutput)
   end
 
-  it "#frameWrap" do
-    expect(Pictureframe.frameWrap("hello", 20)).to eq("| | hello        | |")
-  end
+  describe '#expandLine' do
+    it 'will expand to width' do
+      left = "left"
+      right = "right"
+      width = 20
+      filler = " "
+      expected = "left           right"
+      expect(Pictureframe.expandLine(left, right, filler, width)).to eq(expected)
+    end
 
-  it '#expandLine' do
-    left = "left"
-    right = "right"
-    width = 20
-    filler = " "
-    expected = "left           right"
-    expect(Pictureframe.expandLine(left, right, filler, width)).to eq(expected)
+    it 'will adjust width if too small' do
+      expect(Pictureframe.expandLine("| | ", " | |", " ", 2, "hello")).to eq("| | hello | |")
+    end
   end
 end
