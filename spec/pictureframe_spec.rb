@@ -1,14 +1,29 @@
 require 'spec_helper'
 
 describe Pictureframe do
-  it '#frame' do
-    desiredOutput = [ ".___________.",
-                      "| ._______. |",
-                      "| |       | |",
-                      "| | test  | |",
-                      "| ._______. |",
-                      "|___________|"]
-    expect(Pictureframe.frame("test", 13)).to eq(desiredOutput)
+  describe '#frame' do
+    it 'will expand frame to desired width' do
+      desiredOutput = [ ".___________.",
+                        "| ._______. |",
+                        "| |       | |",
+                        "| | test  | |",
+                        "| ._______. |",
+                        "|___________|"]
+      expect(Pictureframe.frame("test", 13)).to eq(desiredOutput)
+    end
+
+    it 'will break string to desired width' do
+      desiredOutput = [ ".___________.",
+                        "| ._______. |",
+                        "| |       | |",
+                        "| | the q | |",
+                        "| | uick  | |",
+                        "| | brown | |",
+                        "| |  fox  | |",
+                        "| ._______. |",
+                        "|___________|"]
+      expect(Pictureframe.frame("the quick brown fox", 13)).to eq(desiredOutput)
+    end
   end
 
   describe '#expandLine' do
