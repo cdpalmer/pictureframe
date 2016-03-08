@@ -13,7 +13,7 @@ module Pictureframe
       insideLines = textSpace < text.length ? breakText(text, textSpace) : [text]
     else
       totalLength = lefts[0].length + rights[0].length + text.length
-      width = totalLength if totalLength > width
+      width = totalLength
     end
 
     lefts.each_with_index do |row, i|

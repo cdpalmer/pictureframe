@@ -2,6 +2,16 @@ require 'spec_helper'
 
 describe Pictureframe do
   describe '#frame' do
+    it 'will expand to width of text' do
+      desiredOutput = [ ".___________.",
+                        "| ._______. |",
+                        "| |       | |",
+                        "| | tests | |",
+                        "| ._______. |",
+                        "|___________|"]
+      expect(Pictureframe.frame("tests")).to eq(desiredOutput)
+    end
+
     it 'will expand frame to desired width' do
       desiredOutput = [ ".___________.",
                         "| ._______. |",
