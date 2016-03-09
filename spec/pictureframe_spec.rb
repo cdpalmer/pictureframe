@@ -34,6 +34,14 @@ describe Pictureframe do
                         "|___________|"]
       expect(Pictureframe.frame("the quick brown fox", 13)).to eq(desiredOutput)
     end
+
+    it 'can handle non-string values' do
+      hash = {a: 'b'}
+      expect(Pictureframe.frame(hash)).to be_truthy
+      expect(Pictureframe.frame(1)).to be_truthy
+      expect(Pictureframe.frame(Object.new)).to be_truthy
+      expect(Pictureframe.frame([1,2,'3'])).to be_truthy
+    end
   end
 
   describe '#expandLine' do
