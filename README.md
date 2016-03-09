@@ -26,25 +26,24 @@ For this example, we will be dubugging `@account`.
 In your server code, you can use picture frame like so:
 
 ```ruby
-Pictureframe.frame(@account.first_name, @account.email, @account.uuid)
+require 'pictureframe'
+
+# ...
+
+width = 28
+Pictureframe.frame(@account.email, width)
 ```
 
 And in your server, you will see this as an output:
 
 ```
-   _____________________________
-  | ._________________________. |
-  | |                         | |
-  | | Cody                    | |
-  | | ----------------------  | |
-  | | teampalmer.apps@gmail   | |
-  | | .com                    | |
-  | | ----------------------  | |
-  | | 50691d7a-e6e7-4c45-     | |
-  | | bd27-68553d639b87       | |
-  | |                         | |
-  | ._________________________. |
-   _____________________________
+   ___________________________
+  | ._______________________. |
+  | |                       | |
+  | | teampalmer.apps@gmail | |
+  | | .com                  | |
+  | ._______________________. |
+   ___________________________
 ```
 
 ## Development
