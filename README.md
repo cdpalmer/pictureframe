@@ -1,4 +1,4 @@
-# Pictureframe
+# Pictureframe [![Gem Version](https://badge.fury.io/rb/pictureframe.svg)](https://badge.fury.io/rb/pictureframe)
 
 This is a gem to help organize and finding your debug statements in your server
 logs.
