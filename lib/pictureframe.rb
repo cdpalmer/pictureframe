@@ -2,7 +2,12 @@ require "pictureframe/version"
 
 module Pictureframe
   def self.frame(text, width = nil)
-    text = text.to_s
+    if text.nil?
+      return []
+    else
+      text = text.to_s
+    end
+
     inputLocation = 3
     output = []
     lefts =  [".___", "| ._", "| | ", "| ._", "|___"]

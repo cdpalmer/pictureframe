@@ -2,6 +2,10 @@ require 'spec_helper'
 
 describe Pictureframe do
   describe '#frame' do
+    it 'returns empty array if nil' do
+      expect(Pictureframe.frame(nil)).to eq([])
+    end
+
     it 'will expand to width of text' do
       desiredOutput = [ ".___________.",
                         "| ._______. |",
@@ -43,6 +47,8 @@ describe Pictureframe do
       expect(Pictureframe.frame([1,2,'3'])).to be_truthy
     end
   end
+
+  it 'will include a label on the frame'
 
   describe '#expandLine' do
     it 'will expand to width' do
