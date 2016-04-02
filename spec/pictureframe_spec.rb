@@ -1,12 +1,17 @@
 require 'spec_helper'
 
 describe Pictureframe do
+  before do
+    IO.any_instance.stub(:puts) # suppress puts output
+  end
+
   describe '#frame' do
     it 'returns empty array if nil' do
       expect(Pictureframe.frame(nil)).to eq([])
     end
 
     it 'will expand to width of text' do
+
       desiredOutput = [ ".___________.",
                         "| ._______. |",
                         "| |       | |",
