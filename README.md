@@ -32,6 +32,7 @@ require 'pictureframe'
 
 width = 28
 Pictureframe.frame(@account.email, width)
+Pictureframe.frame(@account.email)
 ```
 
 And in your server, you will see this as an output:
@@ -44,6 +45,12 @@ And in your server, you will see this as an output:
   | | .com                  | |
   | ._______________________. |
    ___________________________
+   _______________________________
+  | .___________________________. |
+  | |                           | |
+  | | teampalmer.apps@gmail.com | |
+  | .___________________________. |
+   _______________________________
 ```
 
 ## Development
