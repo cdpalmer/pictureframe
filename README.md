@@ -21,7 +21,7 @@ Or install it yourself as:
 
 ## Usage
 
-For this example, we will be dubugging `@account`.
+For this example, we will be dubugging `@account`
 
 In your server code, you can use picture frame like so:
 
