@@ -1,5 +1,11 @@
 require "pictureframe/version"
 
+def f(text, width = nil)
+  Pictureframe.frame(text, width)
+end
+alias frame f
+alias pf f
+
 module Pictureframe
   def self.frame(text, width = nil)
     if text.nil?

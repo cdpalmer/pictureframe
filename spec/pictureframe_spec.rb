@@ -11,7 +11,6 @@ describe Pictureframe do
     end
 
     it 'will expand to width of text' do
-
       desiredOutput = [ ".___________.",
                         "| ._______. |",
                         "| |       | |",
@@ -50,6 +49,29 @@ describe Pictureframe do
       expect(Pictureframe.frame(1)).to be_truthy
       expect(Pictureframe.frame(Object.new)).to be_truthy
       expect(Pictureframe.frame([1,2,'3'])).to be_truthy
+    end
+  end
+
+  describe 'aliases' do
+    before(:each) do
+      @desiredOutput = [ ".___________.",
+                        "| ._______. |",
+                        "| |       | |",
+                        "| | tests | |",
+                        "| ._______. |",
+                        "|___________|"]
+    end
+
+    it '#f' do
+      expect(f("tests")).to eq(@desiredOutput)
+    end
+
+    it '#pf' do
+      expect(pf("tests")).to eq(@desiredOutput)
+    end
+
+    it '#frame' do
+      expect(frame("tests")).to eq(@desiredOutput)
     end
   end
 
