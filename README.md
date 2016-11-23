@@ -31,8 +31,8 @@ require 'pictureframe'
 # ...
 
 width = 28
-Pictureframe.frame(@account.email, width)
-Pictureframe.frame(@account.email)
+frame(@account.email, width)
+frame @account.email
 ```
 
 And in your server, you will see this as an output:
@@ -51,6 +51,15 @@ And in your server, you will see this as an output:
   | | teampalmer.apps@gmail.com | |
   | .___________________________. |
    _______________________________
+```
+
+I have also added aliases, so you can quickly use `#f`, `#pf`, and `#frame`.  So these are all going to have the same output:
+
+```
+Pictureframe.frame 'hello'
+frame 'hello'
+pf 'hello'
+f 'hello'
 ```
 
 ## Development
